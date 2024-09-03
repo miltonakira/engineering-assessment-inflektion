@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "c487be01-d9c2-4082-b70d-8b5cec7c443e",
+		"name": "@@PEAK_ONE_DEV-TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12772272"
+	},
+	"item": [
+		{
+			"name": "REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Milton Akira Fukuhara\",\r\n    \"email\":\"miltonakira@gmail.com\",\r\n    \"password\":\"secret5987461\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/newUser",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"newUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AUTHENTICATE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"miltonakira@gmail.com\",\r\n    \"password\": \"secret5987461\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/authenticate",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EMAILS/GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/emails/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"emails",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EMAILS/GET BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/emails/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"emails",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EMAILS/UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"affiliate_id\": 1,\r\n    \"envelope\": \"envelope\",\r\n    \"from\": \"FROM\",\r\n    \"subject\": \"SUBJECT\",\r\n    \"to\": \"TO\",\r\n    \"email\": \"MIME-Version: 1.0\\r\\nX-Mailer: MailBee.NET 8.0.4.428\\r\\nSubject: test subject\\r\\nTo: kevinm@datamotion.com\\r\\nContent-Type: multipart/mixed;\\r\\n       boundary=\\\"XXXXboundary text\\\"\\r\\n\\r\\n--XXXXboundary text\\r\\nContent-Type: multipart/alternative;\\r\\n       boundary=\\\"XXXXboundary text\\\"\\r\\n\\r\\n--XXXXboundary text\\r\\nContent-Type: text/plain;\\r\\n       charset=\\\"utf-8\\\"\\r\\nContent-Transfer-Encoding: quoted-printable\\r\\n\\r\\nThis is the body text of a sample message.\\r\\n--XXXXboundary text\\r\\nContent-Type: text/html;\\r\\n       charset=\\\"utf-8\\\"\\r\\nContent-Transfer-Encoding: quoted-printable\\r\\n<pre>This is the body text of a sample message.</pre>\\r\\n\\r\\n--XXXXboundary text\\r\\nContent-Type: text/plain;\\r\\nname=\\\"log_attachment.txt\\\"\\r\\nContent-Disposition: attachment;\\r\\nfilename=\\\"log_attachment.txt\\\"\\r\\nContent-Transfer-Encoding: base64\\r\\n\\r\\nTUlNRS1WZXJzaW9uOiAxLjANClgtTWFpbGVyOiBNYWlsQmVlLk5FVCA4LjAuNC40MjgNClN1Ympl\\r\\nY3Q6IHRlc3Qgc3ViamVjdA0KVG86IGtldmlubUBkYXRhbW90aW9uLmNvbQ0KQ29udGVudC1UeXBl\\r\\nOiBtdWx0aXBhcnQvYWx0ZXJuYXRpdmU7DQoJYm91bmRhcnk9Ii0tLS09X05leHRQYXJ0XzAwMF9B\\r\\nRTZCXzcyNUUwOUFGLjg4QjdGOTM0Ig0KDQoNCi0tLS0tLT1fTmV4dFBhcnRfMDAwX0FFNkJfNzI1\\r\\nRTA5QUYuODhCN0Y5MzQNCkNvbnRlbnQtVHlwZTogdGV4dC9wbGFpbjsNCgljaGFyc2V0PSJ1dGYt\\r\\nOCINCkNvbnRlbnQtVHJhbnNmZXItRW5jb2Rpbmc6IHF1b3RlZC1wcmludGFibGUNCg0KdGVzdCBi\\r\\nb2R5DQotLS0tLS09X05leHRQYXJ0XzAwMF9BRTZCXzcyNUUwOUFGLjg4QjdGOTM0DQpDb250ZW50\\r\\nLVR5cGU6IHRleHQvaHRtbDsNCgljaGFyc2V0PSJ1dGYtOCINCkNvbnRlbnQtVHJhbnNmZXItRW5j\\r\\nb2Rpbmc6IHF1b3RlZC1wcmludGFibGUNCg0KPHByZT50ZXN0IGJvZHk8L3ByZT4NCi0tLS0tLT1f\\r\\nTmV4dFBhcnRfMDAwX0FFNkJfNzI1RTA5QUYuODhCN0Y5MzQtLQ0K\"\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/emails/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"emails",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EMAILS/STORE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"affiliate_id\": 1,\r\n    \"envelope\": \"envelope\",\r\n    \"from\": \"FROM\",\r\n    \"subject\": \"SUBJECT\",\r\n    \"to\": \"TO2\",\r\n    \"raw_text\": \" new one  \",\r\n    /*\"email\": \"MIME-Version: 1.0\\r\\nX-Mailer: MailBee.NET 8.0.4.428\\r\\nSubject: test subject\\r\\nTo: kevinm@datamotion.com\\r\\nContent-Type: multipart/mixed;\\r\\n       boundary=\\\"XXXXboundary text\\\"\\r\\n\\r\\n--XXXXboundary text\\r\\nContent-Type: multipart/alternative;\\r\\n       boundary=\\\"XXXXboundary text\\\"\\r\\n\\r\\n--XXXXboundary text\\r\\nContent-Type: text/plain;\\r\\n       charset=\\\"utf-8\\\"\\r\\nContent-Transfer-Encoding: quoted-printable\\r\\n\\r\\nThis is the body text of a sample message.\\r\\n--XXXXboundary text\\r\\nContent-Type: text/html;\\r\\n       charset=\\\"utf-8\\\"\\r\\nContent-Transfer-Encoding: quoted-printable\\r\\n<pre>This is the body text of a sample message.</pre>\\r\\n\\r\\n--XXXXboundary text\\r\\nContent-Type: text/plain;\\r\\nname=\\\"log_attachment.txt\\\"\\r\\nContent-Disposition: attachment;\\r\\nfilename=\\\"log_attachment.txt\\\"\\r\\nContent-Transfer-Encoding: base64\\r\\n\\r\\nTUlNRS1WZXJzaW9uOiAxLjANClgtTWFpbGVyOiBNYWlsQmVlLk5FVCA4LjAuNC40MjgNClN1Ympl\\r\\nY3Q6IHRlc3Qgc3ViamVjdA0KVG86IGtldmlubUBkYXRhbW90aW9uLmNvbQ0KQ29udGVudC1UeXBl\\r\\nOiBtdWx0aXBhcnQvYWx0ZXJuYXRpdmU7DQoJYm91bmRhcnk9Ii0tLS09X05leHRQYXJ0XzAwMF9B\\r\\nRTZCXzcyNUUwOUFGLjg4QjdGOTM0Ig0KDQoNCi0tLS0tLT1fTmV4dFBhcnRfMDAwX0FFNkJfNzI1\\r\\nRTA5QUYuODhCN0Y5MzQNCkNvbnRlbnQtVHlwZTogdGV4dC9wbGFpbjsNCgljaGFyc2V0PSJ1dGYt\\r\\nOCINCkNvbnRlbnQtVHJhbnNmZXItRW5jb2Rpbmc6IHF1b3RlZC1wcmludGFibGUNCg0KdGVzdCBi\\r\\nb2R5DQotLS0tLS09X05leHRQYXJ0XzAwMF9BRTZCXzcyNUUwOUFGLjg4QjdGOTM0DQpDb250ZW50\\r\\nLVR5cGU6IHRleHQvaHRtbDsNCgljaGFyc2V0PSJ1dGYtOCINCkNvbnRlbnQtVHJhbnNmZXItRW5j\\r\\nb2Rpbmc6IHF1b3RlZC1wcmludGFibGUNCg0KPHByZT50ZXN0IGJvZHk8L3ByZT4NCi0tLS0tLT1f\\r\\nTmV4dFBhcnRfMDAwX0FFNkJfNzI1RTA5QUYuODhCN0Y5MzQtLQ0K\"*/\r\n     \"email\": \"Received: from contoso.com (10.194.241.197) by contoso.com (10.194.241.197) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256) id 15.1.1374.0 via Mailbox Transport; Mon, 4 Sep 2017 03:00:08 -0700\\r\\nReceived: from contoso.com (10.194.241.197) by contoso.com (10.194.241.197) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256) id 15.1.1374.0; Mon, 4 Sep 2017 03:00:07 -0700\\r\\nReceived: from contoso.com (fe80::5bf:5059:4ca0:5017) by contoso.com (fe80::5bf:5059:4ca0:5017%12) with mapi id 15.01.1374.000; Mon, 4 Sep 2017 03:00:01 -0700\\r\\nFrom: Administrator <admin@contoso.com>\\r\\nTo: Administrator <admin@contoso.com>\\r\\nSubject: This email has attachment.\\r\\nThread-Topic: This email has attachment.\\r\\nThread-Index: AQHTJWSHSywMzSz8o0OJud48nG50GQ==\\r\\nDate: Mon, 4 Sep 2017 10:00:00 +0000\\r\\nMessage-ID: \\r\\n\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0 <4aade2547798441eab5188a7a2436bc1@contoso.com>\\r\\nAccept-Language: en-US\\r\\nContent-Language: en-US\\r\\nX-MS-Exchange-Organization-AuthAs: Internal\\r\\nX-MS-Exchange-Organization-AuthMechanism: 04\\r\\nX-MS-Exchange-Organization-AuthSource: \\r\\n\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0 contoso.com\\r\\nX-MS-Has-Attach: yes\\r\\nX-MS-Exchange-Organization-Network-Message-Id: \\r\\n\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0 0ffdb402-ec03-42c8-5d32-08d4f37bb517\\r\\nX-MS-Exchange-Organization-SCL: -1\\r\\nX-MS-TNEF-Correlator:\\r\\nX-MS-Exchange-Organization-RecordReviewCfmType: 0\\r\\nx-ms-publictraffictype: Emai\\r\\n\\r\\nMIME-Version: 1.0\\r\\nContent-Type: multipart/mixed;\\r\\n\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0 boundary=\\\"_004_4aade2547798441eab5188a7a2436bc1contoso_\\\"\\r\\n\\r\\n--_004_4aade2547798441eab5188a7a2436bc1contoso_\\r\\nContent-Type: multipart/alternative;\\r\\n\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0 boundary=\\\"_000_4aade2547798441eab5188a7a2436bc1contoso_\\\"\\r\\n\\r\\n--_000_4aade2547798441eab5188a7a2436bc1contoso_\\r\\nContent-Type: text/plain; charset=\\\"iso-8859-1\\\"\\r\\nContent-Transfer-Encoding: quoted-printable\\r\\n\\r\\nThe attachment is an email.\\r\\n\\r\\n--_000_4aade2547798441eab5188a7a2436bc1contoso_\\r\\nContent-Type: text/html; charset=\\\"iso-8859-1\\\"\\r\\nContent-Transfer-Encoding: quoted-printable\\r\\n\\r\\n<html>\\r\\n<head>\\r\\n<meta http-equiv=3D\\\"Content-Type\\\" content=3D\\\"text/html; charset=3Diso-8859-1\\\">\\r\\n<style type=3D\\\"text/css\\\" style=3D\\\"display:none;\\\"><!-- P {margin-top:0;margin-bottom:0;} --></style>\\r\\n</head>\\r\\n<body dir=3D\\\"ltr\\\">\\r\\n<div id=3D\\\"divtagdefaultwrapper\\\" style=3D\\\"font-size:12pt;color:#000000;font-family:Calibri,Helvetica,sans-serif;\\\" dir=3D\\\"ltr\\\">\\r\\n<p>The attachment is an email.</p>\\r\\n</div>\\r\\n</body>\\r\\n</html>\\r\\n\\r\\n--_000_4aade2547798441eab5188a7a2436bc1contoso_--\\r\\n\\r\\n--_004_4aade2547798441eab5188a7a2436bc1contoso_\\r\\nContent-Type: application/octet-stream; name=\\\"Attachment email.eml\\\"\\r\\nContent-Description: Attachment email.eml\\r\\nContent-Disposition: attachment; filename=\\\"Attachment email.eml\\\"; size=408;\\r\\n\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0 creation-date=\\\"Mon, 04 Sep 2017 09:59:43 GMT\\\";\\r\\n\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0 modification-date=\\\"Mon, 04 Sep 2017 09:59:43 GMT\\\"\\r\\nContent-Transfer-Encoding: base64\\r\\n\\r\\nRnJvbToJQWRtaW5pc3RyYXRvciA8YWRtaW5AdGVuYW50LUVYSEItMTQ3MS5jb20+DQpTZW50OglN\\r\\nb25kYXksIFNlcHRlbWJlciA0LCAyMDE3IDM6MjYgUE0NClRvOglTcml2YXJkaGFuIEhlYmJhcg0K\\r\\nU3ViamVjdDoJQXR0YWNobWVudCBlbWFpbA0KDQpJIHdpbGwgYXR0YWNoIHRoaXMgZW1haWwgdG8g\\r\\nYW5vdGhlciBtYWlsLg0K\\r\\n\\r\\n--_004_4aade2547798441eab5188a7a2436bc1contoso_--\"\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/emails",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"emails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EMAILS/DELETE BY ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"affiliate_id\": 1,\r\n    \"envelope\": \"envelope\",\r\n    \"from\": \"FROM\",\r\n    \"subject\": \"SUBJECT\",\r\n    \"to\": \"TO\",\r\n    \"email\": \"EMAIL\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/emails/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"emails",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost/api",
+			"type": "string"
+		}
+	]
+}
