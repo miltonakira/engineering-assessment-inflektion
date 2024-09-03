@@ -3,8 +3,6 @@ Test applied by Peak One Dev
 
 ## Important Links
 - [Laravel 11.x Documentation](https://laravel.com/docs/11.x/releases)
-- [Docker](https://www.docker.com/ )
-- [Docker Hub](https://hub.docker.com/)
 - [Composer](https://getcomposer.org/)
 - [Postman](https://www.postman.com/)
 
@@ -12,11 +10,11 @@ Test applied by Peak One Dev
 
 ### Git 
 
-You have two ways to use this system, the first is by cloning the repository with the "git clone" command, remembering that there are PHP dependencies in relation to Laravel 11.x that will be listed below.
+Cloning the repository with the "git clone" command, remembering that there are PHP dependencies in relation to Laravel 11.x that will be listed below.
 
 ```bash
 cd <chosen directory>/
-git clone https://github.com/your-username/peak-one-dev-test.git .
+git clone https://github.com/miltonakira/engineering-assessment-inflektion.git .
 ```
 
 #### Git / Server Dependecies
@@ -75,30 +73,11 @@ git clone https://github.com/your-username/peak-one-dev-test.git .
 | `mockery/mockery`              | Mocking library for PHP.                        |
 | `nunomaduro/collision`         | Provides error handling and formatting for the CLI. |
 
-
-### Docker
-
-I prepared a container with the necessary installation, to run the service just start the container using the command below, if you are not familiar with docker the installation is simple and quick: https://docs.docker.com/engine/install/
-
-```bash
-docker run -d --name <container-name> -p <port-number>:80 miltonakira/peak-one-dev-test:latest
-```
-
-
 ## Configurations
 
 Once it has started, you need to configure the MySql Database.
 To do this, just change the .env file in the container located at "/var/www/html/test/.env".
 Change the values ​​of environment variables with the prefix "DB_". 
-
-In docker: 
-
-```bash
-docker exec -it <container-name> /bin/sh 
-vi /var/www/html/test/.env
-```
-
-In local server:
 
 There are some additional steps for the project that runs the service locally, it will be necessary to install composer and perform an update.
 (instructions here https://getcomposer.org/download/)
@@ -114,12 +93,6 @@ composer update
 ```
 
 As there is a user/authentication table for API access, it will be necessary to run the "php artisan migrate" command inside the container.
-
-In docker:
-```bash
-docker exec -it <container-name> /bin/sh 
-php artisan migrate
-```
 
 In local server:
 ```bash
